@@ -1,13 +1,5 @@
 "use strict";
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-const arr2 = ["a", "d", "s", "r"];
-const arr3 = [
-  { name: "Ann", books: ["HP", "Pyton"], age: 30 },
-  { name: "Jhon", books: ["JS", "Hibernate"], age: 20 },
-  { name: "Bill", books: ["Java", "SQL"], age: 35 },
-];
-
 function myReduceRight(arr, callback, innitialValue) {
   let result;
   if (innitialValue) {
@@ -24,13 +16,14 @@ function myReduceRight(arr, callback, innitialValue) {
   return result;
 }
 
-const arrArr = [
-  [1, 2],
-  [3, 4],
-  [5, 6],
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const arr2 = ["a", "d", "s", "r"];
+const arr3 = [
+  { name: "Ann", books: ["HP", "Pyton"], age: 30 },
+  { name: "Jhon", books: ["JS", "Hibernate"], age: 20 },
+  { name: "Bill", books: ["Java", "SQL"], age: 35 },
 ];
 
-console.log(myReduceRight(arrArr, (a, b) => a.concat(b)));
 console.log(myReduceRight(arr, (a, b) => a + b))
 console.log(myReduceRight(arr2, (a, b) => a.concat(b)))
 console.log(myReduceRight(arr3, (a, b) => [...a, ...b.books], []))
